@@ -78,16 +78,12 @@ Open the project in Visual Studio Code (or your favorite code editor):
 code .
 ```
 
-Install the dependencies:
-
-```
-npm install
-```
-
 Run the project:
 
+Right click on the `index.html` file and choose
+
 ```
-npm start
+Open with Live Server
 ```
 
 Now create a branch using the `git checkout -b` command:
