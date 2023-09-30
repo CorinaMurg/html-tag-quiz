@@ -17,7 +17,17 @@ Please go to the <a href="https://github.com/YurisCodingClub/html-tag-quiz/discu
 
 This project aims to be a beginner friendly way to your first contribution to open source. If you are looking to make your first contribution, follow the steps below.
 
+Also, read the <a href="https://github.com/YurisCodingClub/accessibility-mentor/blob/main/CONTRIBUTING.md">Contribution Guide</a> before interacting with the repositories.
+
 Images are from the <a href="https://github.com/YurisCodingClub/dev-cv/">Dev CV repository of this organization.</a>
+
+‼️ To get more women and especially people with disabilities into tech, I always assign tickets to them first.
+
+### CodeNewbies
+
+If you are a complete beginner in open source / GitHub, don't worry. Look at the following description on how to set up the project locally.
+
+If you are a complete beginner in coding or open source, don't worry. Let's start with the following: Look up what semantic HTML means. Think about what a navigation actually is (a list of links). Use the corresponding semantic HTML for it. You can find everything needed to fulfill this issue by looking the terms up in w3schools or MDN. If these sites are new to you, don't worry. You will get used to them over time. Happy coding 🙂
 
 <img align="right" width="300" src="https://docs.google.com/uc?export=download&id=1SbliQ66gfCx0uiwcG_04FAPXNMPHVE7s" alt="fork this repository" />
 
