@@ -59,17 +59,17 @@ console.log("Tags in W3 list but not in Original list:", uniqueToW3);
 // ]
 // Tags in MDN list but not in W3 list: [
 //   '<hgroup>',
-//   '<image>Non-standard',
-//   '<marquee>',
+//   '<image>Non-standard', LABELED DEPRECATED BY MDN
+//   '<marquee>', LABELED DEPRECATED BY MDN
 //   '<menu>',
-//   '<menuitem>Non-standard',
-//   '<nobr>',
-//   '<noembed>',
-//   '<plaintext>',
+//   '<menuitem>Non-standard', LABELED DEPRECATED BY MDN
+//   '<nobr>', LABELED DEPRECATED BY MDN
+//   '<noembed>', LABELED DEPRECATED BY MDN
+//   '<plaintext>', LABELED DEPRECATED BY MDN
 //   '<portal>Experimental',
-//   '<rb>',
-//   '<rtc>',
+//   '<rb>', LABELED DEPRECATED BY MDN
+//   '<rtc>', LABELED DEPRECATED BY MDN
 //   '<search>',
 //   '<slot>',
-//   '<xmp>'
+//   '<xmp>' LABELED DEPRECATED BY MDN
 // ]
