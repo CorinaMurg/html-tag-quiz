@@ -13,6 +13,15 @@ In order to become an Accessibility Developer you should know as many semantic H
 
 Please go to the <a href="https://github.com/YurisCodingClub/html-tag-quiz/discussions/">discussions section of the project</a> where I opened a discussion about the app's design and work together on a great design for the app.
 
+## Contributors
+
+[//]: contributor-faces
+
+<a href="https://github.com/YuriDevAT"><img src="https://avatars.githubusercontent.com/u/54622834?v=4" title="Julia Undeutsch" width="80" height="80"></a>
+<a href="https://github.com/CorinaMurg"><img src="https://avatars.githubusercontent.com/u/115652409?v=4" title="Corina Murg" width="80" height="80"></a>
+
+[//]: contributor-faces
+
 ## How to contribute
 
 This project aims to be a beginner friendly way to your first contribution to open source. If you are looking to make your first contribution, follow the steps below.
