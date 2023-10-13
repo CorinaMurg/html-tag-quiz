@@ -15,8 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function submitVal() {
     let val = document.getElementById("input1").value;
-    // trim white spaces, remove < and > from the input value, and convert to lowercase
-    let sanitizedVal = val.trim().replace(/[ <>]/g, "").toLowerCase();
+    // remove all white spaces and non-alphabetical characters except . ! - 
+    let regex = /[^a-zA-Z!-.]/g;
+    // change input to lower case and apply regex
+    let sanitizedVal = val.toLowerCase().replace(regex, "");
+
     localStorage.setItem("val", sanitizedVal);
     let li = "<li>" + sanitizedVal + "</li>";
     // check if the input value is in the tags array
