@@ -15,10 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function submitVal() {
     let val = document.getElementById("input1").value;
-    localStorage.setItem("val", val);
-    let li = "<li>" + val + "</li>";
+    // remove all white spaces and non-alphabetical characters except . ! - 
+    let regex = /[^a-zA-Z!-.]/g;
+    // change input to lower case and apply regex
+    let sanitizedVal = val.toLowerCase().replace(regex, "");
+    localStorage.setItem("val", sanitizedVal);
+    let li = "<li>" + sanitizedVal + "</li>";
     // check if the input value is in the tags array
-    if (tags.includes(val)) {
+    let found = tags.some(tag => tag.toLowerCase() === sanitizedVal);
+    if (found) {
       document.getElementById("list").insertAdjacentHTML("beforeend", li);
     }
     document.getElementById("input1").value = "";
