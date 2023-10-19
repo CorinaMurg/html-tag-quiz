@@ -30,7 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         document.getElementById("input1").value = "";
     }
+
 });
+
 
 function saveTagToLocalStorage(tag) {
     let savedTags = JSON.parse(localStorage.getItem("myTags")) || [];
@@ -39,11 +41,10 @@ function saveTagToLocalStorage(tag) {
 }
 
 function uploadTagsFromLocalStorage() {
-    let savedTags = JSON.parse(localStorage.getItem("tags")) || [];
+    let savedTags = JSON.parse(localStorage.getItem("myTags")) || [];
     savedTags.forEach(tag => {
         let li = "<li>" + tag + "</li>";
         document.getElementById("list").insertAdjacentHTML("beforeend", li);
     });
 }
-
 
