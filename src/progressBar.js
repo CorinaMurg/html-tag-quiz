@@ -14,7 +14,7 @@ export function updateProgressBar() {
     let progressDescription = document.getElementById('progress-description')
     progressDescription.textContent = `Your progress: ${tagsCurrentCount} out of ${tagsMaxCount} tags added.`;
 
-    // MDN DOCS RECOMMEND USING IT, BUT I DID NOT NOTICE ANY DIFFERENCE WHEN SCREEN READER WAS ON
+    // MDN DOCS RECOMMEND USING IT, BUT I DID NOT NOTICE ANY DIFFERENCE WHEN SCREEN READER WAS ON.
     let ariaValueText = `${tagsCurrentCount}`;
     progressBar.setAttribute('aria-valuetext', ariaValueText);
 
@@ -22,18 +22,18 @@ export function updateProgressBar() {
     // OR NOT AT ALL? JUST UPDATE AT 50% AND 100%?
     let ariaMessage = `${tagsCurrentCount} added.`;
     let progressLive = document.getElementById('progress-live');
-    progressLive.innerHTML = ariaMessage;
+    progressLive.textContent = ariaMessage;
 
     // TEST CASES for updating aria-live region. Note: the values are made up.
     if (tagsCurrentCount === 5) {
         let ariaMessage = `Your progress: ${tagsCurrentCount} added. This is 5%. Great job.`;
         let progressLive = document.getElementById('progress-live');
-        progressLive.innerHTML = ariaMessage;
+        progressLive.textContent = ariaMessage;
     } 
     if (tagsCurrentCount === 10) {
         let ariaMessage = `Your progress: ${tagsCurrentCount} added. This is 10%. Great job.`;
         let progressLive = document.getElementById('progress-live');
-        progressLive.innerHTML = ariaMessage;
+        progressLive.textContent = ariaMessage;
     }
     // END OF TEST CASES
 
@@ -41,13 +41,13 @@ export function updateProgressBar() {
     if (tagsCurrentCount === tagsMaxCount / 2) {
         let ariaMessage = `Your progress: ${tagsCurrentCount} added. This is 50% completion. Way to go. You are halfway there.`;
         let progressLive = document.getElementById('progress-live');
-        progressLive.innerHTML = ariaMessage;
+        progressLive.textContent = ariaMessage;
     } 
     
     if (tagsCurrentCount === tagsMaxCount) {
         let ariaMessage = `Your progress: ${tagsCurrentCount} added. This is 100% completion. Congratulations. You have completed the challenge.`;
         let progressLive = document.getElementById('progress-live');
-        progressLive.innerHTML = ariaMessage;
+        progressLive.textContent = ariaMessage;
     }
 }
 
