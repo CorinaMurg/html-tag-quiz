@@ -15,6 +15,8 @@ export function updateProgressBar() {
     progressDescription.textContent = `Your progress: ${tagsCurrentCount} out of ${tagsMaxCount} tags added.`;
 
     // MDN DOCS RECOMMEND USING IT, BUT I DID NOT NOTICE ANY DIFFERENCE WHEN SCREEN READER WAS ON.
+    // NVDA only announces the label, while the Narrator announces the label (twice) and the %, but 
+    // this is regardless whether aria-valuetext is used or not.
     let ariaValueText = `${tagsCurrentCount}`;
     progressBar.setAttribute('aria-valuetext', ariaValueText);
 
