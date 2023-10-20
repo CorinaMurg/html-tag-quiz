@@ -10,6 +10,17 @@
       <input type="text" id="input1" title="input1" />
       <button type="submit">Submit</button>
     </form>
+    <div>
+        <div id="progress-live" aria-live="polite" class="visually-hidden"></div>
+        <label for="progress-bar">Your Progress:</label>
+        <progress id="progress-bar" role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-label="Your progress: 0 out of 124 tags added."
+            value="0"
+            max="100">
+        </progress>
+    </div>
     <ul id="list">
       <li><b>Inputs</b></li>
     </ul>
