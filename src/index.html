@@ -14,12 +14,14 @@
     </form>
     <div>
         <div id="progress-live" aria-live="polite" class="visually-hidden"></div>
-        <label for="progress-bar">Your Progress:</label>
+        <label for="progress-bar">
+            <span aria-hidden="true">Your Progress: </span>
+            <span id="progress-description" class="visually-hidden">Your progress: 0 out of 124 tags added</span>
+        </label>
         <progress 
             id="progress-bar" 
             aria-valuemin="0"
             aria-valuemax="100"
-            aria-label="Your progress: 0 out of 124 tags added."
             aria-valuetext="0"
             value="0"
             max="100">
