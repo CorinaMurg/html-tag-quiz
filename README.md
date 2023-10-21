@@ -22,16 +22,6 @@ Please go to the <a href="https://github.com/YurisCodingClub/html-tag-quiz/discu
 
 [//]: contributor-faces
 
-## How to contribute
-
-This project aims to be a beginner friendly way to your first contribution to open source. If you are looking to make your first contribution, follow the steps below.
-
-Also, read the <a href="https://github.com/YurisCodingClub/accessibility-mentor/blob/main/CONTRIBUTING.md">Contribution Guide</a> before interacting with the repositories.
-
-Images are from the <a href="https://github.com/YurisCodingClub/dev-cv/">Dev CV repository of this organization.</a>
-
-‼️ To get more women and especially people with disabilities into tech, I always assign tickets to them first.
-
 ### CodeNewbies
 
 If you are a complete beginner in open source / GitHub, don't worry. Look at the following description on how to set up the project locally.
@@ -159,13 +149,5 @@ Now submit the pull request.
 <img style="float: right;" src="https://docs.google.com/uc?export=download&id=1r6VFuraC-5l9PF4JKn9A4Rhmm-4VelI7" alt="submit pull request" />
 
 Soon I'll be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged.
-
-## Where to go from here?
-
-Congrats! You just completed the standard _fork -> clone -> edit -> pull request_ workflow that you'll encounter often as a contributor!
-
-Celebrate your contribution and share it with your friends and followers on your social media accounts.
-
-Now let's get you started with your next contribution, wether on this or any other great open source projects on GitHub.
 
 Have fun 👻!
