@@ -2,6 +2,8 @@
 <html>
   <head>
     <script type="module" src="index.js" defer></script>
+    <script type="module" src="progressBar.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Semantic HTML tags</h1>
@@ -10,6 +12,19 @@
       <input type="text" id="input1" title="input1" />
       <button type="submit">Submit</button>
     </form>
+    <div>
+        <div id="progress-live" aria-live="polite" class="visually-hidden"></div>
+        <label for="progress-bar">
+            <span aria-hidden="true">Your Progress: </span>
+            <span id="progress-description" class="visually-hidden">Your progress: 0 out of 124 tags added</span>
+        </label>
+        <progress 
+            id="progress-bar" 
+            min="0"
+            max="100"
+            value="0"
+        </progress>
+    </div>
     <ul id="list">
       <li><b>Inputs</b></li>
     </ul>
