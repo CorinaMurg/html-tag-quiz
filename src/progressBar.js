@@ -20,28 +20,28 @@ export function updateProgressBar() {
     let progressLive = document.getElementById('progress-live');
     progressLive.textContent = ariaMessage;
 
-    // TEST CASES for updating aria-live region. Note: the values are made up.
-    // if (tagsCurrentCount === 5) {
-    //     let ariaMessage = `Your progress: ${tagsCurrentCount} added. This is 5%. Great job.`;
-    //     let progressLive = document.getElementById('progress-live');
-    //     progressLive.textContent = ariaMessage;
-    // } 
-    // if (tagsCurrentCount === 10) {
-    //     let ariaMessage = `Your progress: ${tagsCurrentCount} added. This is 10%. Great job.`;
-    //     let progressLive = document.getElementById('progress-live');
-    //     progressLive.textContent = ariaMessage;
-    // }
+    // TEST CASES for updating aria-live region. Note: the values are made up. 
+    if (tagsCurrentCount === 6) {
+        let ariaMessage = `Your progress: ${tagsCurrentCount} tags added. This is 5%. Great job.`;
+        let progressLive = document.getElementById('progress-live');
+        progressLive.textContent = ariaMessage;
+    } 
+    if (tagsCurrentCount === 12) {
+        let ariaMessage = `Your progress: ${tagsCurrentCount} tags added. This is 10%. Great job.`;
+        let progressLive = document.getElementById('progress-live');
+        progressLive.textContent = ariaMessage;
+    }
     // END OF TEST CASES
 
     // Update aria-live region when progress reaches half or full completion
     if (tagsCurrentCount === tagsMaxCount / 2) {
-        let ariaMessage = `Your progress: ${tagsCurrentCount} added. This is 50% completion. Way to go. You are halfway there.`;
+        let ariaMessage = `Your progress: ${tagsCurrentCount} tags added. This is 50% completion. Way to go. You are halfway there.`;
         let progressLive = document.getElementById('progress-live');
         progressLive.textContent = ariaMessage;
     } 
     
     if (tagsCurrentCount === tagsMaxCount) {
-        let ariaMessage = `Your progress: ${tagsCurrentCount} added. This is 100% completion. Congratulations. You have completed the challenge.`;
+        let ariaMessage = `Your progress: ${tagsCurrentCount} tags added. This is 100% completion. Congratulations. You have completed the challenge.`;
         let progressLive = document.getElementById('progress-live');
         progressLive.textContent = ariaMessage;
     }
