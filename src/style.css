@@ -1,3 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root {
+    --purple: #3A233E;
+    --orange: #bf5701;
+    --light-orange: #e6a570;
+}
+
+body {
+    background-color: var(--purple);
+    font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    fill: var(--orange);
+}
+
+.container {
+    margin: auto;
+    margin-top: 5%;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+h2 {
+    color: white;
+    font-weight: 300;
+}
+
+#input1 {
+    width: 15em;
+    line-height: 20px;
+}
+
+.button {
+    background-color: var(--orange);
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    height: 30px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 5px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+}
+
+.button:hover {
+    background-color: var(--light-orange);
+}
+
+#progress-bar {
+    margin-top: 2.5%;
+}
+
+#progress-title {
+    color: white;
+}
+
+li {
+    color: white;
+    font-weight: 300;
+    list-style-type: none;
+    text-align: center;
+}
 
 .visually-hidden {
     position: absolute;
@@ -6,6 +91,6 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     border: 0;
 }
