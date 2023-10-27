@@ -26,16 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let li = "<li>" + sanitizedVal + "</li>";
     // check if the input value is in the tags array
     let found = tags.some(tag => tag.toLowerCase() === sanitizedVal);
-    
     // get the list of inputs already made
-    const getCurrentList = document.querySelectorAll("#list li");
+    const getList = localStorage.getItem("myTags");
     let checkDuplicate = false;
-    // check if the input is already in the list
-    getCurrentList.forEach(li => {
-      if (li.textContent.toLowerCase() === sanitizedVal) {
+    // ? checks if the list is not empty first, to make includes() work
+    if (getList?.includes(val)) {
       checkDuplicate = true;
-      }
-    });
+    }
 
     if (found && !checkDuplicate) {
         document.getElementById("list").insertAdjacentHTML("beforeend", li);
