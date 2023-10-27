@@ -41,8 +41,7 @@ h2 {
     line-height: 20px;
 }
 
-
-.button-1 {
+.button {
     background-color: var(--orange);
     border-radius: 8px;
     border-style: none;
@@ -50,7 +49,7 @@ h2 {
     color: white;
     cursor: pointer;
     display: inline-block;
-    font-family: "Montserrat", sans-serif;
+    font-family: inherit;
     font-size: 14px;
     font-weight: 500;
     height: 30px;
@@ -64,13 +63,9 @@ h2 {
     text-decoration: none;
     transition: color 100ms;
     vertical-align: baseline;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
 }
 
-.button-1:hover,
-.button-1:focus {
+.button:hover {
     background-color: var(--light-orange);
 }
 
@@ -85,7 +80,8 @@ h2 {
 li {
     color: white;
     font-weight: 300;
-    list-style-type: none
+    list-style-type: none;
+    text-align: center;
 }
 
 .visually-hidden {
