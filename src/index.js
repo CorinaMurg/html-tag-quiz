@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function submitVal() {
-        let val = document.getElementById("input1").value;
+        let val = document.getElementById("input").value;
         // remove all white spaces and non-alphabetical characters except . ! - 
         let regex = /[^a-zA-Z!-.]/g;
         // change input to lower case and apply regex
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             saveTagToLocalStorage(sanitizedVal); // Save tag to localStorage
             updateProgressBar();
         }
-        document.getElementById("input1").value = "";
+        document.getElementById("input").value = "";
     }
 });
 
