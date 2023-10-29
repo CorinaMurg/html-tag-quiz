@@ -26,11 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let li = "<li>" + sanitizedVal + "</li>";
     // check if the input value is in the tags array
     let found = tags.some(tag => tag.toLowerCase() === sanitizedVal);
-    // get the list of inputs already made
-    const getList = localStorage.getItem("myTags");
+    // get the list of inputs already made in JSON format
+    const getJSON = JSON.stringify(localStorage.getItem("myTags"));
+    // convert the list to an array
+    const getList = JSON.parse(getJSON);
+
     let checkDuplicate = false;
     // ? checks if the list is not empty first, to make includes() work
-    if (getList?.includes(val)) {
+    if (getList?.includes(sanitizedVal)) {
       checkDuplicate = true;
     }
 
