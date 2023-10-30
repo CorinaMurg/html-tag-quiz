@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function submitVal() {
-    let val = document.getElementById("input1").value;
+    let val = document.getElementById("input").value;
     // remove all white spaces and non-alphabetical characters except . ! - 
     let regex = /[^a-zA-Z!-.]/g;
     // change input to lower case and apply regex
@@ -28,18 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let found = tags.some(tag => tag.toLowerCase() === sanitizedVal);
     // convert the list to an array
     const getList = JSON.parse(localStorage.getItem("myTags"));
-
     let checkDuplicate = false;
     // ? checks if the list is not empty first, to make includes() work
     if (getList?.includes(sanitizedVal)) {
       checkDuplicate = true;
     }
-
     if (found && !checkDuplicate) {
         document.getElementById("list").insertAdjacentHTML("beforeend", li);
         saveTagToLocalStorage(sanitizedVal); // Save tag to localStorage
     }
-    document.getElementById("input1").value = "";
+    document.getElementById("input").value = "";
   }
 });
 

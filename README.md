@@ -1,8 +1,6 @@
 ![Open Source Love](https://img.shields.io/badge/open%20soure-%F0%9F%92%9F-blueviolet?style=flat-square)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-#
-
 # About HTML Tag Quiz
 
 In order to become an Accessibility Developer you should know as many semantic HTML tags as possible. Let's check how many you actually know.
