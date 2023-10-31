@@ -70,13 +70,14 @@ function renderAllTags(tagsArray) {
         // if the current tag's initial is different from the previous tag's initial, create a space
         if (previousTagInitial && currentTagInitial !== previousTagInitial) {
             // create a space. this is a div and not an li to not confuse screen readers
-            // THIS REPLACES THE PREVIOUS CONCATANATION OF <li> + tag + </li>.  I HAD A HARD TIME GETTING THE SEPARATOR TO WORK
             let separator = document.createElement("div");
             separator.style.height = "16px";
             listElement.appendChild(separator);
         }
 
         // create the li element and add it to the list.
+        // THIS REPLACES THE PREVIOUS CONCATANATION OF <li> + tag + </li>.  
+        // I HAD A HARD TIME GETTING THE SEPARATOR TO WORK OTHERWISE
         let li = document.createElement("li");
         li.textContent = tag;
         listElement.appendChild(li);
