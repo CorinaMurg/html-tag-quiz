@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // deals with the data aspect of adding a tag and sorting the list
 function insertTagAndSort(tag, tagArray) {
     tagArray.push(tag);
-    tagArray.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    tagArray.sort();
     return tagArray;
 }
 
@@ -69,9 +69,10 @@ function renderAllTags(tagsArray) {
         let currentTagInitial = tag[0];
         // if the current tag's initial is different from the previous tag's initial, create a space
         if (previousTagInitial && currentTagInitial !== previousTagInitial) {
-            // create a space. this is a div and not an li to confuse screen readers
+            // create a space. this is a div and not an li to not confuse screen readers
+            // THIS REPLACES THE PREVIOUS CONCATANATION OF <li> + tag + </li>.  I HAD A HARD TIME GETTING THE SEPARATOR TO WORK
             let separator = document.createElement("div");
-            separator.style.height = "10px";
+            separator.style.height = "16px";
             listElement.appendChild(separator);
         }
 
