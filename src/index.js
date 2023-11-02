@@ -68,7 +68,6 @@ function renderAllTags(tagsArray) {
         let currentTagInitial = tag[0];
         // if the current tag's initial is different from the previous tag's initial, create a space
         if (previousTagInitial && currentTagInitial !== previousTagInitial) {
-            // create a space. this is a div and not an li to not confuse screen readers
             let separator = document.createElement("li");
             separator.setAttribute("aria-hidden", "true");
             listElement.appendChild(separator);
