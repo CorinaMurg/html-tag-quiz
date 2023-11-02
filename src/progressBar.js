@@ -2,7 +2,7 @@ import { tagsW3 } from "./tags.js";
 
 export function updateProgressBar() {
     let tagsMaxCount = tagsW3.length;
-    let tagsCurrentCount = document.getElementById("list").querySelectorAll("li").length - 1;  // Subtracting 1 because of the "Inputs" list item
+    let tagsCurrentCount = document.getElementById("list").querySelectorAll("li:not([aria-hidden='true'])").length;
     
     let progressPercentage = (tagsCurrentCount / tagsMaxCount) * 100;
 
