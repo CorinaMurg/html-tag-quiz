@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let regex = /[^a-zA-Z!-.]/g;
         // change input to lower case and apply regex
         let sanitizedVal = val.toLowerCase().replace(regex, "");
-        let li = "<li>" + sanitizedVal + "</li>";
         // check if the input value is in the tags array
         let found = tags.some(tag => tag.toLowerCase() === sanitizedVal);
         // convert the list to an array
