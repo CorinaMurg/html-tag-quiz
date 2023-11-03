@@ -20,9 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function submitVal() {
     let val = document.getElementById("input").value;
     // remove all white spaces and non-alphabetical characters except . ! - 
-    let regex = /[^a-zA-Z!-.]/g;
+    let regex = /[^a-zA-Z0-9!.\-]/g;
     // change input to lower case and apply regex
     let sanitizedVal = val.toLowerCase().replace(regex, "");
+    console.log("Sanitized Value:", sanitizedVal);
     let li = "<li>" + sanitizedVal + "</li>";
     // check if the input value is in the tags array
     let found = tags.some(tag => tag.toLowerCase() === sanitizedVal);
