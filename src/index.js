@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (found && !checkDuplicate) {
         document.getElementById("list").insertAdjacentHTML("beforeend", li);
         saveTagToLocalStorage(sanitizedVal); // Save tag to localStorage
+        document.getElementById("input").value = "";
     }
-    document.getElementById("input").value = "";
   }
 });
 
