@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // retrieve the saved tags from localStorage and feed them into the renderAllTags function
     let savedTags = JSON.parse(localStorage.getItem("myTags")) || [];
     renderAllTags(savedTags);
-
     updateProgressBar();
     // Find the form element and add a submit event listener
     const form = document.querySelector("form");
