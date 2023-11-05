@@ -72,6 +72,10 @@ li {
   text-align: center;
 }
 
+li[aria-hidden="true"] {
+    height: 1rem;
+}
+
 .visually-hidden {
   border: 0;
   clip: rect(0, 0, 0, 0);
