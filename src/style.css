@@ -86,3 +86,9 @@ li[aria-hidden="true"] {
   position: absolute;
   width: 1px;
 }
+
+/* added to better visualize the subtitle and the User Guide link */
+h2 {
+    width: 35rem;
+    margin-inline: auto;
+}
