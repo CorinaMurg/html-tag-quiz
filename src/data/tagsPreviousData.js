@@ -12,10 +12,10 @@ const tagsOriginal = ["<!-->","<!DOCTYPE>", "<a>","<abbr>","<address>","<area>",
 
 // COMPARE Original and W3 TAGS
 let uniqueToOriginal = tagsOriginal.filter(tag => !tagsW3.includes(tag));
-console.log("Tags in Original list but not in W3 list:", uniqueToOriginal);
+// console.log("Tags in Original list but not in W3 list:", uniqueToOriginal);
 
 let uniqueToW3 = tagsW3.filter(tag => !tagsOriginal.includes(tag));
-console.log("Tags in W3 list but not in Original list:", uniqueToW3);
+// console.log("Tags in W3 list but not in Original list:", uniqueToW3);
 
 // DELETED APP'S ORIGINAL TAGS
 
