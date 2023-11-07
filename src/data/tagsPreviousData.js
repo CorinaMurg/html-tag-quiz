@@ -17,27 +17,7 @@ console.log("Tags in Original list but not in W3 list:", uniqueToOriginal);
 let uniqueToW3 = tagsW3.filter(tag => !tagsOriginal.includes(tag));
 console.log("Tags in W3 list but not in Original list:", uniqueToW3);
 
-// Tags in Original list but not in W3 list: [
-//     '<!-->',
-//     '<articel>',
-//     '<articele>',
-//     'bdo',
-//     'blockquote',
-//     '<capton>',
-//     '<ruby'
-//   ]
-//   Tags in W3 list but not in Original list: [
-//     '<!--...-->', '<acronym>',
-//     '<applet>',   '<article>',
-//     '<basefont>', '<bdo>',
-//     '<big>',      '<blockquote>',
-//     '<caption>',  '<center>',
-//     '<dir>',      '<font>',
-//     '<frame>',    '<frameset>',
-//     '<noframes>', '<ruby>',
-//     '<strike>',   '<sup>',
-//     '<title>',    '<tt>'
-//   ]
+// DELETED APP'S ORIGINAL TAGS
 
 
 

@@ -1,4 +1,4 @@
-import { tagsW3 } from "./tags.js";
+import { tagsW3 } from "./data/tagsPreviousData.js";
 
 export function updateProgressBar() {
   let tagsMaxCount = tagsW3.length;
