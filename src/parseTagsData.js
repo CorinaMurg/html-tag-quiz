@@ -6,12 +6,12 @@ function parseTagsData(data) {
     const tagsObject = {};
 
     lines.forEach(line => {
-        const [tag, decription, support, ...notes] = line.split(',');
+        const [tag, description, support, ...notes] = line.split(',');
 
         const cleanedTag = tag.trim().replace(/<|>/g, '');
 
         tagsObject[cleanedTag] = {
-            decription: decription.trim(),
+            description: description.trim(),
             support: support.trim(),
             notes: notes.join(',').trim()
         }
