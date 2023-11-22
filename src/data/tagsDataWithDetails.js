@@ -1,5 +1,5 @@
 // Combines W3 tags and MDN tags, including the deprecated ones
-const tagsDataWithDetails = `<!--...>, 'Defines a comment', FALSE, '', FALSE,
+export const tagsDataWithDetails = `<!--...>, 'Defines a comment', FALSE, '', FALSE,
 <!DOCTYPE>, 'Defines the document type', FALSE, '', FALSE,
 <a>, 'Defines a hyperlink', FALSE, '', TRUE,
 <abbr>, 'Defines an abbreviation or an acronym', FALSE, '', FALSE,
@@ -138,3 +138,41 @@ const tagsDataWithDetails = `<!--...>, 'Defines a comment', FALSE, '', FALSE,
 <wbr>, 'Defines a possible line-break', FALSE, '', FALSE,
 <xmp>, 'Renders text between the start and end tags without interpreting the HTML in between and using a monospaced font', TRUE, 'Use <pre> and <code> instead', FALSE,
 `
+
+// FOR REVIEWER TO SEE THE OUTPUT OF THE PARSED DATA: 
+// 1. uncomment "export" from line 2
+// 2. uncomment the code below
+// 3. click run code
+
+// function parseTagsData(data) {
+//     const lines = data.split('\n');
+//     const tagsObject = {};
+
+//     lines.forEach(line => {
+//         // Skip empty lines
+//         if (line.trim() === '') {
+//             return;
+//         }
+
+//         const parts = line.split(',').map(part => part.trim());
+
+//         const [tag, description, deprecated, notes, atSupport] = parts;
+
+//         const cleanedTag = tag.replace(/<|>/g, ''); 
+
+//         const objRegex = /^'|'$/g;
+
+//         tagsObject[cleanedTag] = {
+//             // Removes leading and trailing quotes
+//             'description': description.replace(objRegex, ''), 
+//             'deprecated': deprecated === 'TRUE', // Converts to boolean
+//             'notes': notes.replace(objRegex, ''), 
+//             'at-support': atSupport === 'TRUE', // Converts to boolean
+//         };
+//     });
+//     return tagsObject;
+// }
+
+// const tagsObject = parseTagsData(tagsDataWithDetails);
+
+// console.log(tagsObject);
