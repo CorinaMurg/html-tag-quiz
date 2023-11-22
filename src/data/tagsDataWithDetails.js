@@ -1,4 +1,4 @@
-// Combines W3 tags and MDN tags
+// Combines W3 tags and MDN tags, including the deprecated ones
 const tagsDataWithDetails = `<!--...>, 'Defines a comment', FALSE, '', FALSE,
 <!DOCTYPE>, 'Defines the document type', FALSE, '', FALSE,
 <a>, 'Defines a hyperlink', FALSE, '', TRUE,
@@ -110,12 +110,12 @@ const tagsDataWithDetails = `<!--...>, 'Defines a comment', FALSE, '', FALSE,
 <slot>, 'Defines a placeholder inside a web component that you can fill with your own markup', FALSE, '', FALSE,
 <small>, 'Defines smaller text', FALSE, '', FALSE,
 <source>, 'Defines multiple media resources for media elements (<video> and <audio>)', FALSE, '', FALSE,
-<span>, 'Defines a section in a document', FALSE, 'It\'s a generic inline-level container that has no special meaning. It should only be used when no other semantic element is relevant.', FALSE,
+<span>, 'Defines a section in a document', FALSE, 'It\'s a generic inline-level container that has no special meaning. It should only be used when no other semantic element is relevant', FALSE,
 <strike>, 'Defines strikethrough text', TRUE, 'Use <del> or <s> instead', FALSE,
 <strong>, 'Defines important text', FALSE, '', TRUE,
 <style>, 'Defines style information for a document', FALSE, '', FALSE,
 <sub>, 'Defines subscripted text', FALSE, '', TRUE,
-<summary>, 'Defines a visible heading for a <details> element', FALSE, '', FALSE,
+<summary>, 'Defines a visible heading for a <details> element', FALSE, 'Many, but not all, user agents expose the summary element with an implicit role of button.', FALSE,
 <sup>, 'Defines superscripted text', FALSE, '', TRUE,
 <svg>, 'Defines a container for SVG graphics', FALSE, '', TRUE,
 <table>, 'Defines a table', FALSE, '', TRUE,
@@ -137,5 +137,4 @@ const tagsDataWithDetails = `<!--...>, 'Defines a comment', FALSE, '', FALSE,
 <video>, 'Defines embedded video content', FALSE, '', FALSE,
 <wbr>, 'Defines a possible line-break', FALSE, '', FALSE,
 <xmp>, 'Renders text between the start and end tags without interpreting the HTML in between and using a monospaced font', TRUE, 'Use <pre> and <code> instead', FALSE,
-`;
-
+`

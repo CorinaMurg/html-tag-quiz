@@ -20,14 +20,13 @@ function parseTagsData(data) {
             // Removes leading and trailing quotes
             description: description.replace(/^'|'$/g, ''), 
             deprecated: deprecated,
-            notes: notes.replace(/^'|'$/g, ''), 
-            srSupport: srSupport
+            "notes": notes.replace(/^'|'$/g, ''), 
+            "at-support": srSupport
         };
     });
     return tagsObject;
 }
 
-
-const tagsObject = parseTagsData(tagsDataWithDetails);
+export const tagsObject = parseTagsData(tagsDataWithDetails);
 
 console.log(tagsObject);
