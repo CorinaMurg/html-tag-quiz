@@ -140,7 +140,7 @@ export const tagsDataWithDetails = `<!--...>, 'Defines a comment', FALSE, '', FA
 `
 
 // FOR REVIEWER TO SEE THE OUTPUT OF THE PARSED DATA: 
-// 1. uncomment "export" from line 2
+// 1. comment "export" from line 2
 // 2. uncomment the code below
 // 3. click run code
 
