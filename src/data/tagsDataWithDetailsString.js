@@ -1,5 +1,5 @@
 // Combines W3 tags and MDN tags, including the deprecated ones
-export const tagsDataWithDetails = `<!--...>, 'Defines a comment', FALSE, '', FALSE,
+const tagsDataWithDetails = `<!--...>, 'Defines a comment', FALSE, '', FALSE,
 <!DOCTYPE>, 'Defines the document type', FALSE, '', FALSE,
 <a>, 'Defines a hyperlink', FALSE, '', TRUE,
 <abbr>, 'Defines an abbreviation or an acronym', FALSE, '', FALSE,
@@ -139,40 +139,35 @@ export const tagsDataWithDetails = `<!--...>, 'Defines a comment', FALSE, '', FA
 <xmp>, 'Renders text between the start and end tags without interpreting the HTML in between and using a monospaced font', TRUE, 'Use <pre> and <code> instead', FALSE,
 `
 
-// FOR REVIEWER TO SEE THE OUTPUT OF THE PARSED DATA: 
-// 1. comment "export" from line 2
-// 2. uncomment the code below
-// 3. click run code
+// To create a JSON-like object from the string above click "run code" in the top right corner of this page.
+function parseTagsData(data) {
+    const lines = data.split('\n');
+    const tagsObject = {};
 
-// function parseTagsData(data) {
-//     const lines = data.split('\n');
-//     const tagsObject = {};
+    lines.forEach(line => {
+        // Skip empty lines if they exist in the raw data
+        if (line.trim() === '') {
+            return;
+        }
+        // Split each line of raw data into an array of parts
+        const parts = line.split(',').map(part => part.trim());
+        // Destructure the parts array into variables
+        const [tag, description, deprecated, notes, atSupport] = parts;
 
-//     lines.forEach(line => {
-//         // Skip empty lines
-//         if (line.trim() === '') {
-//             return;
-//         }
+        const cleanedTag = tag.replace(/<|>/g, ''); 
+        // Removes leading and trailing quotes from description and notes
+        const objRegex = /^'|'$/g;
 
-//         const parts = line.split(',').map(part => part.trim());
+        tagsObject[cleanedTag] = {
+            
+            'description': description.replace(objRegex, ''), 
+            'deprecated': deprecated === 'TRUE', // Converts to boolean
+            'notes': notes.replace(objRegex, ''), 
+            'at-support': atSupport === 'TRUE', // Converts to boolean
+        };
+    });
+    return tagsObject;
+}
 
-//         const [tag, description, deprecated, notes, atSupport] = parts;
-
-//         const cleanedTag = tag.replace(/<|>/g, ''); 
-
-//         const objRegex = /^'|'$/g;
-
-//         tagsObject[cleanedTag] = {
-//             // Removes leading and trailing quotes
-//             'description': description.replace(objRegex, ''), 
-//             'deprecated': deprecated === 'TRUE', // Converts to boolean
-//             'notes': notes.replace(objRegex, ''), 
-//             'at-support': atSupport === 'TRUE', // Converts to boolean
-//         };
-//     });
-//     return tagsObject;
-// }
-
-// const tagsObject = parseTagsData(tagsDataWithDetails);
-
-// console.log(tagsObject);
+const tagsObject = parseTagsData(tagsDataWithDetails);
+console.log(tagsObject);

@@ -1,5 +1,5 @@
 
-import { tagsObject } from "./parseTagsData.js";
+import { tagsDataObject } from "./data/tagsDataWithDetailsObject.js";
 import { updateProgressBar } from "./progressBar.js";
 
 let savedTags = JSON.parse(localStorage.getItem("myTags")) || [];
@@ -26,7 +26,7 @@ function submitVal() {
   // change input to lower case and apply regex
   let sanitizedVal = val.toLowerCase().replace(regex, "");
   // check if the input value is a tag in the tagsObject
-  let isFound = tagsObject.hasOwnProperty(sanitizedVal);
+  let isFound = tagsDataObject.hasOwnProperty(sanitizedVal);
   // convert the list to an array
   const getList = JSON.parse(localStorage.getItem("myTags"));
   let isDuplicate = false;
