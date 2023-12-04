@@ -1,7 +1,6 @@
-import { tagsW3 } from "./tags.js";
+
+import { tagsDataObject } from "./data/tagsDataWithDetailsObject.js";
 import { updateProgressBar } from "./progressBar.js";
-// Remove the < and > from the tags
-const tags = tagsW3.map(tag => tag.replace(/[<|>]/g, ""));
 
 let savedTags = JSON.parse(localStorage.getItem("myTags")) || [];
 
@@ -26,8 +25,8 @@ function submitVal() {
   let regex = /[^a-zA-Z0-9!.\-]/g;
   // change input to lower case and apply regex
   let sanitizedVal = val.toLowerCase().replace(regex, "");
-  // check if the input value is in the tags array
-  let isFound = tags.some(tag => tag.toLowerCase() === sanitizedVal);
+  // check if the input value is a tag in the tagsObject
+  let isFound = tagsDataObject.hasOwnProperty(sanitizedVal);
   // convert the list to an array
   const getList = JSON.parse(localStorage.getItem("myTags"));
   let isDuplicate = false;
