@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye&family=Roboto&display=swap');
+
 :root {
-  --light-orange: #e6a570;
-  --orange: #bf5701;
-  --bg: #3A233E;
-  --text: #fff;
+  --bg-clr: #FDFDFD;
+  --bg-clr-pref: #023047;
+  --bg-clr__el-dark: #023047;
+  --bg-clr__el-light: rgba(255, 214, 10, 0.4);
+  --bg-clr__el-medium: #FFB703;
+  --bg-clr__el-light-pref: #FFD60A;
+  --bg-clr__el-medium-pref: #FFB703;
+  --text-clr-dark: #023047;
+  --text-clr-light: #FDFDFD;
+  --text-clr-pref: #FFD60A;
+  --font: "Roboto", sans-serif;
 }
 
 html {
@@ -10,52 +19,91 @@ html {
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg-clr);
+  color: var(--text-clr-dark);
+  font-family: var(--font);
 }
 
-.logo {
+img {
   display: block;
+  height: 42px;
   margin: auto;
+  width: 42px;
 }
 
-.container {
-  margin: 5% auto 0;
-  padding: 10px;
+@media screen and (min-width: 420px) {
+  img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+div {
+  margin: 52px auto;
+  max-width: 900px;
+  padding: 0 28px;
   text-align: center;
-  width: 50%;
 }
 
 h1 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-family: "Ribeye", serif;
+  font-size: 3.5rem;
+  letter-spacing: -0.016rem;
+  line-height: 1.7;
+  margin: 16px 0 11px;
+}
+
+h1 span {
+  display: block;
+  font-family: var(--font);
+  font-size: 1.7rem;
+  font-weight: 400;
 }
 
 h2 {
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.031rem;
+  line-height: 1.5;
 }
 
-.input {
+form {
+  display: flex;
+  justify-content: space-around;
+  margin: 24px auto;
+  max-width: 320px;
+}
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+input {
+  background-color: var(--bg-clr__el-light);
+  border: unset;
+  border-block-end: 3px solid var(--bg-clr__el-dark);
+  height: 37px; /* could be removed with x icon size? */
   line-height: 20px;
-  width: 15em;
+  margin-bottom: 4px;
+  padding: 0 0 0 16px;
+  width: 150px;
 }
 
-.button-submit {
-  background-color: var(--orange);
-  border-radius: 8px;
-  border-style: none;
-  color: var(--text);
-  cursor: pointer;
-  display: inline-block;
+button {
+  background-color: var(--bg-clr__el-dark);
+  border: none;
+  color: var(--text-clr-light);
   font-family: inherit;
   font-size: 1rem;
   font-weight: 500;
-  padding: 10px 16px;
+  height: 40px; /* could be removed with x icon size? */
+  padding: 10px 24px;
 }
 
-.button-submit:hover {
-  background-color: var(--light-orange);
+button:hover {
+  background-color: rgba(2, 48, 71, 0.8);
 }
 
 .progress-bar {
