@@ -8,10 +8,12 @@
   --bg-clr__el-medium: #FFB703;
   --bg-clr__el-light-pref: #FFD60A;
   --bg-clr__el-medium-pref: #FFB703;
+  --bg-clr__el-dark-pref: #024d72;
+  --font: "Roboto", sans-serif;
   --text-clr-dark: #023047;
   --text-clr-light: #FDFDFD;
   --text-clr-pref: #FFD60A;
-  --font: "Roboto", sans-serif;
+  color-scheme: light dark;
 }
 
 html {
@@ -134,3 +136,31 @@ li[aria-hidden="true"] {
   position: absolute;
   width: 1px;
 }
+
+div div:has(label + progress) {
+  background-color: var( --bg-clr__el-medium);
+  bottom: 0;
+  display: block;
+  height: 80px;
+  left: 0;
+  margin: 0;
+  max-width: unset;
+  position: fixed;
+  width: 100vw;
+}
+
+/* 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-clr-pref);
+    color: var(--text-clr-pref);
+  };
+
+  input {
+    background-color: var(--bg-clr__medium-pref);
+  };
+
+  button {
+    background-color: var(--bg-clr__el-dark-pref);
+  }
+} */
