@@ -5,11 +5,12 @@
 
 In order to become an Accessibility Developer you should know as many semantic HTML tags as possible. Let's check how many you actually know.
 
-**Note:** Merge reviews are done every Saturday. 😇
-
 ## Design of the app
 
 Please go to the <a href="https://github.com/YurisCodingClub/html-tag-quiz/discussions/">discussions section of the project</a> where I opened a discussion about the app's design and work together on a great design for the app.
+
+## Project update (August 2024)
+Please stay tuned for upcoming updates! This project will resume very soon. 😊
 
 ## Contributors
 
